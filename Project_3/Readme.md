@@ -19,12 +19,22 @@ And you may want to start a third window so that you can run playercam also.
 4. The challenge is to take **blobs.cc** and edit it so that the robot will first search for a beacon with the red band. It then drives toward that beacon with a proportional control (see below for explanation), and stops when it gets within two feet of that beacon.
 5. It should be possible to do this just using the data from the blobfinder.
 
->Hint1: If the camera points directly forward on the robot, then if the blob is >in the middle of the camera image, the robot is facing the beacon. If it’s off >center, the robot should turn to make the blob shift towards the center.
-> Hint2: The area of the blob grows (non-linearly) as the robot gets closer to >beacon, which could be used as a surrogate for distance.
-> **[Note1]** Proportional control, which is often effective for this kind of task, has the robot move more quickly when it is far from the position/orientation it is aiming for, and more slowly as it gets closer.That way the robot doesn’t overshoot its target much, also it doesn’t take too long to get into the neighborhood of the target.
-> **[Note2]** The variable that matters to you is of the type player_blobfinder_blob_t (see blobs.cc), which is returned by GetBlob(i). The color member variable represents color in the following format (32bits):
-_00000000 | red(8-bit) | green(8-bit) | blue(8-bit)_
-As you can read from blobs.cc, there is a (short) cast, which retains only the lower 16 bits of the color information. The color calibration file specifies that only blobs of red, or green, or blue can be detected. This means if the actual color of the blob detected is red, the “short” cast will produce acolor value of 0. Blue color corresponds to 255, and green is -256!
+> **Hint1:** If the camera points directly forward on the robot, then if the blob is in
+> the middle of the camera image, the robot is facing the beacon. If it’s off center,
+> the robot should turn to make the blob shift towards the center.
+
+> **Hint2:** The area of the blob grows (non-linearly) as the robot gets closer to 
+> beacon, which could be used as a surrogate for distance.
+
+> **[Note1]** Proportional control, which is often effective for this kind of task,
+> has the robot move more quickly when it is far from the position/orientation it is
+> aiming for, and more slowly as it gets closer.That way the robot doesn’t overshoot 
+> its target much, also it doesn’t take too long to get into the neighborhood of the 
+> target.
+
+> **[Note2]** The variable that matters to you is of the type 
+> player_blobfinder_blob_t (see blobs.cc), which is returned by GetBlob(i). The color 
+> member variable represents color in the following format (32bits):
 
 6. When you are done, save your program as (your-names)-proj3-part1.cc and make sure you put your name in the comments.
 7. You’ll need to submit this to me after you are done with the project.
