@@ -11,10 +11,10 @@ _./local-roomba_
 and as before the simulated robot will start moving
 4. At first it may look exactly the same as before, but this time you’ll see the robot start to output information like:
 We are at
-|X: | -4.18556|
-|Y: | -7.81444|
-|A: |  -0.785398|
-|---:|:---|
+X: | -4.18556
+Y: | -7.81444
+A: |  -0.785398
+---:|:---
 
 These are the coordinates of the robot — it knows where it is.
 5. Note that the robot isn’t calculating where it is, it is being told by the simulator Stage.
