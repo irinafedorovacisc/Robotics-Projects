@@ -23,7 +23,7 @@ And you may want to start a third window so that you can run playercam also.
 > the middle of the camera image, the robot is facing the beacon. If it’s off center,
 > the robot should turn to make the blob shift towards the center.\
 > **Hint2:** The area of the blob grows (non-linearly) as the robot gets closer to 
-> beacon, which could be used as a surrogate for distance.
+> beacon, which could be used as a surrogate for distance.\
 > **[Note1]** Proportional control, which is often effective for this kind of task,
 > has the robot move more quickly when it is far from the position/orientation it is
 > aiming for, and more slowly as it gets closer.That way the robot doesn’t overshoot 
