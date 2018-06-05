@@ -6,11 +6,11 @@ This project is all about localization. First you’ll learn how to make the rob
 
 1. Login to your computer (user name is student, password is student) open terminal windows, get a copy of the project files (project4.tgz) from the instructor, put this on the Desktop and extract the files.
 2. This time your starting point is the file _local-roomba.cc_
-3. Start by running it. To do that start up player:
-_player world41.cfg_
-Then you can compile and run local-roomba in your second window:
-_./build local-roomba_
-_./local-roomba_
+3. Start by running it. To do that start up player:\
+_player world41.cfg_\
+Then you can compile and run local-roomba in your second window:\
+_./build local-roomba_\
+_./local-roomba_\
 and as before the simulated robot will start moving
 4. At first it may look exactly the same as before, but this time you’ll see the robot start to output information like:
 We are at:
